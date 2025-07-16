@@ -1,3 +1,53 @@
+}
+```
+
+### 提现历史 (USER_DATA)
+```
+GET /wapi/v3/withdrawHistory.html (HMAC SHA256)
+```
+
+**权重:**
+1
+
+**参数:**
+
+Name | Type | Mandatory | Description
+------------ | ------------ | ------------ | ------------
+asset | STRING | NO	
+status | INT | NO | 0(0:已发送确认Email,1:已被用户取消 2:等待确认 3:被拒绝 4:处理中 5:提现交易失败 6 提现完成)
+startTime | LONG | NO	
+endTime | LONG | NO	
+recvWindow | LONG | NO	
+timestamp | LONG | YES	
+
+
+**响应:**
+```javascript
+{
+    "withdrawList": [
+        {
+            "id":"7213fea8e94b4a5593d507237e5a555b",
+            "amount": 1,
+            "address": "0x6915f16f8791d0a1cc2bf47c13a6b2a92000504b",
+            "asset": "ETH",
+            "txId": "0xdf33b22bdb2b28b1f75ccd201a4a4m6e7g83jy5fc5d5a9d1340961598cfcb0a1",
+            "applyTime": 1508198532000,
+            "status": 4
+        },
+        {
+            "id":"7213fea8e94b4a5534ggsd237e5a555b",//该笔提现在币安的id
+            "amount": 1000, //提现金额
+            "address": "463tWEBn5XZJSxLU34r6g7h8jtxuNcDbjLSjkn3XAXHCbLrTTErJrBWYgHJQyrCwkNgYvyV3z8zctJLPCZy24jvb3NiTcTJ", //提现目的地址
+            "addressTag": "342341222", //提现备注 只对某些币种存在
+            "txId": "b3c6219639c8ae3f9cf010cdc24fw7f7yt8j1e063f9b4bd1a05cb44c4b6e2509", //提现交易id
+            "asset": "XMR",//提现资产类别
+            "applyTime": 1508198532000, //提现申请发起时间
+            "status": 4 //提现状态
+        }
+    ],
+    "success": true
+}
+```
 # REST接口(账户与资金) (2018-07-18)
 # 基本信息
 * 本篇列出REST接口的baseurl **https://api.binance.com**
