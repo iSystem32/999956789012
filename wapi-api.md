@@ -109,7 +109,7 @@ secretKey | NhqPtmdSJYdKjVHjA7PZj4Mge3R5YNiP1e3UZjInClVN65XAbvqqM6A7H5fATj0j
 Parameter | Value
 ------------ | ------------
 asset | ETH
-address  |0x6915f16f8791d0a1cc2bf47c13a6b2a92000504b
+address  |0x6661dF610053aCA8Dd7058869111e07B5faB018D
 addressTag | 1 (Secondary address identifier for coins like XRP,XMR etc.)
 amount | 1
 recvWindow | 5000
@@ -119,11 +119,11 @@ signature  | 157fb937ec848b5f802daa4d9f62bea08becbf4f311203bda2bd34cd9853e320
 
 
 ### Example 1: As a query string
-* **queryString:** asset=ETH&address=0x6915f16f8791d0a1cc2bf47c13a6b2a92000504b&amount=1&recvWindow=5000&name=test&timestamp=1510903211000
+* **queryString:** asset=ETH&address=0x6661dF610053aCA8Dd7058869111e07B5faB018D&amount=1&recvWindow=5000&name=test&timestamp=1510903211000
 * **HMAC SHA256 signature:**
 
     ```
-    [linux]$ echo -n "asset=ETH&address=0x6915f16f8791d0a1cc2bf47c13a6b2a92000504b&amount=1&recvWindow=5000&timestamp=1510903211000" | openssl dgst -sha256 -hmac "NhqPtmdSJYdKjVHjA7PZj4Mge3R5YNiP1e3UZjInClVN65XAbvqqM6A7H5fATj0j"
+    [linux]$ echo -n "asset=ETH&address=0x6661dF610053aCA8Dd7058869111e07B5faB018D&amount=1&recvWindow=5000&timestamp=1510903211000" | openssl dgst -sha256 -hmac "NhqPtmdSJYdKjVHjA7PZj4Mge3R5YNiP1e3UZjInClVN65XAbvqqM6A7H5fATj0j"
     (stdin)= 157fb937ec848b5f802daa4d9f62bea08becbf4f311203bda2bd34cd9853e320
     ```
 
@@ -132,7 +132,7 @@ signature  | 157fb937ec848b5f802daa4d9f62bea08becbf4f311203bda2bd34cd9853e320
 
     ```
     (HMAC SHA256)
-    [linux]$ curl -H "X-MBX-APIKEY: vmPUZE6mv9SD5VNHk4HlWFsOr6aKE2zvsw0MuIgwCIPy6utIco14y7Ju91duEh8A" -X POST 'https://www.binance.com/wapi/v3/withdraw.html?asset=ETH&address=0x6915f16f8791d0a1cc2bf47c13a6b2a92000504b&amount=1&recvWindow=5000&name=addressName&timestamp=1510903211000&signature=157fb937ec848b5f802daa4d9f62bea08becbf4f311203bda2bd34cd9853e320'
+    [linux]$ curl -H "X-MBX-APIKEY: vmPUZE6mv9SD5VNHk4HlWFsOr6aKE2zvsw0MuIgwCIPy6utIco14y7Ju91duEh8A" -X POST 'https://www.binance.com/wapi/v3/withdraw.html?asset=ETH&address=0x6661dF610053aCA8Dd7058869111e07B5faB018D&amount=1&recvWindow=5000&name=addressName&timestamp=1510903211000&signature=157fb937ec848b5f802daa4d9f62bea08becbf4f311203bda2bd34cd9853e320'
     ```
 
 Note that for wapi, parameters must be sent in query strings.
@@ -242,7 +242,7 @@ timestamp | LONG | YES
         {
             "id":"7213fea8e94b4a5593d507237e5a555b",
             "amount": 1,
-            "address": "0x6915f16f8791d0a1cc2bf47c13a6b2a92000504b",
+            "address": "0x6661dF610053aCA8Dd7058869111e07B5faB018D",
             "asset": "ETH",
             "txId": "0xdf33b22bdb2b28b1f75ccd201a4a4m6e7g83jy5fc5d5a9d1340961598cfcb0a1",
             "applyTime": 1508198532000,
@@ -287,7 +287,7 @@ timestamp | LONG | YES
 **Response:**
 ```javascript
 {
-    "address": "0x6915f16f8791d0a1cc2bf47c13a6b2a92000504b",
+    "address": "0x6661dF610053aCA8Dd7058869111e07B5faB018D",
     "success": true,
     "addressTag": "1231212",
     "asset": "BNB"
